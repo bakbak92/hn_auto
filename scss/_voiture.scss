@@ -1,0 +1,42 @@
+.container{
+    padding: 20px 30px;
+    
+}
+.content-voiture{
+    margin: 10px;
+    background: white;
+    max-width: 280px;
+    box-shadow: 0px 0px 5px 0px #656565; 
+    border-radius: 10px;
+    overflow: hidden;   
+    img{
+        max-width:280px;
+        width: 100%;
+    }
+    .content-info{
+        padding: 10px 20px;
+        .name-car{
+            font-weight: 700;
+        }
+        .info-car{
+            padding: 10px 0;
+            span{
+                &:not(:last-child){
+                    border-right: 1.5px solid $grey-fonce;
+                    padding-right: 10px;
+                }
+                
+            }
+        }
+        .content-btn{
+            text-align: center;
+            margin: 10px;
+            button{
+                padding: 15px 35px;
+            }
+        }
+    }
+    .fa-check-square{
+        color: $c-green;
+    }
+}

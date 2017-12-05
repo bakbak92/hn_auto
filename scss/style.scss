@@ -1,0 +1,16 @@
+@import 'footer';
+@import 'vars';
+@import 'header';
+@import 'voiture';
+@import 'form.scss';
+@import 'detail';
+@import 'grid';
+@import 'composant';
+@import 'layout';
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: $gris-back;
+    color: $c-font;
+}
