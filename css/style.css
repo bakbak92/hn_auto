@@ -8,12 +8,76 @@ header {
     justify-content: space-between; }
     header nav .logo {
       padding-left: 30px; }
-    header nav ul {
+    header nav .menu {
       display: flex;
       list-style: none; }
-      header nav ul li {
+      header nav .menu li {
         padding-right: 30px;
         color: white; }
+      @media screen and (max-width: 768px) {
+        header nav .menu {
+          display: none; } }
+    header nav .burger-button {
+      visibility: hidden;
+      position: fixed;
+      top: 2vh;
+      right: 2vh;
+      z-index: 9999999999;
+      padding: 8px; }
+      @media screen and (max-width: 768px) {
+        header nav .burger-button {
+          visibility: visible; } }
+      header nav .burger-button span {
+        width: 25px;
+        border: 2px solid white;
+        background-color: white;
+        display: block;
+        border-radius: 22px;
+        transition: 2s; }
+      header nav .burger-button.active span {
+        border-color: #050875;
+        background-color: #050875; }
+      header nav .burger-button.active .burger-top {
+        position: absolute;
+        top: 8px;
+        transform: rotateZ(45deg); }
+      header nav .burger-button.active .burger-bottom {
+        position: absolute;
+        bottom: 8px;
+        transform: rotateZ(-45deg); }
+      header nav .burger-button.active .burger-middle {
+        transform: rotateZ(270deg);
+        border-color: rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0); }
+      header nav .burger-button .burger-top, header nav .burger-button .burger-bottom {
+        position: absolute; }
+      header nav .burger-button .burger-top {
+        top: 02px; }
+      header nav .burger-button .burger-bottom {
+        bottom: 02px; }
+    header nav .burger-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #f9f9f9;
+      padding: 5px;
+      box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+      z-index: 99999999; }
+    header nav .burger-menu a {
+      text-decoration: none;
+      padding: 15px 11px;
+      font-size: 20px;
+      font-weight: 300;
+      color: #484848;
+      display: block;
+      padding: 5px 15px;
+      text-align: center;
+      white-space: nowrap; }
+    header nav .burger-menu li {
+      list-style: none; }
   header .title {
     padding: 50px; }
     header .title h1 {
