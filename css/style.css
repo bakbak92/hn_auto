@@ -1,3 +1,27 @@
+footer .footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #484848;
+  color: white; }
+  @media screen and (max-width: 450px) {
+    footer .footer {
+      display: block;
+      text-align: center; } }
+  footer .footer ul {
+    display: flex; }
+    @media screen and (max-width: 450px) {
+      footer .footer ul {
+        display: block;
+        margin: 0; } }
+    footer .footer ul li {
+      list-style: none;
+      padding-right: 1em; }
+      @media screen and (max-width: 450px) {
+        footer .footer ul li {
+          padding-top: 0.5em; } }
+      footer .footer ul li i {
+        padding-right: 0.5em; }
+
 header {
   background: url(../img/car.jpeg);
   background-size: cover;
@@ -19,7 +43,7 @@ header {
           display: none; } }
     header nav .burger-button {
       visibility: hidden;
-      position: fixed;
+      position: absolute;
       top: 2vh;
       right: 2vh;
       z-index: 9999999999;
@@ -354,22 +378,35 @@ button {
 .presentation .we-are {
   text-align: center; }
 
-.container-we-are {
-  background: white; }
-  .container-we-are .content-presa {
-    text-align: center;
-    max-width: 500px;
-    overflow: hidden;
-    padding: 10px;
-    border: 2px solid #eee;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3); }
+h2 {
+  text-align: center;
+  padding: 0 2em; }
 
 .wrap-content {
   margin: 30px;
-  max-height: 330px;
   overflow: hidden; }
+  .wrap-content .container-we-are {
+    background: white; }
+    .wrap-content .container-we-are h2 {
+      text-align: center;
+      padding: 0 1em; }
+    @media screen and (min-width: 768px) {
+      .wrap-content .container-we-are {
+        max-height: 330px; } }
+    .wrap-content .container-we-are .wrap-we-are {
+      display: flex;
+      justify-content: center;
+      padding: 0 30px 30px 30px; }
+      .wrap-content .container-we-are .wrap-we-are .content-presa {
+        text-align: center;
+        max-width: 500px;
+        overflow: hidden;
+        padding: 10px;
+        border: 2px solid #eee;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3); }
   .wrap-content .block-img {
-    overflow: hidden; }
+    overflow: hidden;
+    max-height: 330px; }
 
 body {
   margin: 0;
