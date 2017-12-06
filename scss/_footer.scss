@@ -2,11 +2,12 @@ footer{
     .footer{
         display: flex;
         justify-content: space-between;
-        background-color: $c-font;
+        background-color: $c-footer;
         color: $white;
         @media screen and(max-width:450px){
             display: block; 
             text-align: center;
+            padding-bottom: 10px;
          }
         ul{
             display: flex;

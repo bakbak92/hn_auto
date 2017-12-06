@@ -1,12 +1,13 @@
 footer .footer {
   display: flex;
   justify-content: space-between;
-  background-color: #484848;
+  background-color: #2C3E50;
   color: white; }
   @media screen and (max-width: 450px) {
     footer .footer {
       display: block;
-      text-align: center; } }
+      text-align: center;
+      padding-bottom: 10px; } }
   footer .footer ul {
     display: flex; }
     @media screen and (max-width: 450px) {
@@ -22,92 +23,41 @@ footer .footer {
       footer .footer ul li i {
         padding-right: 0.5em; }
 
-header {
+header.header-hp {
   background: url(../img/car.jpeg);
   background-size: cover;
   text-align: center;
   height: 470px; }
-  header nav {
+header nav {
+  display: flex;
+  justify-content: space-between; }
+  header nav .logo {
+    padding-left: 30px; }
+  header nav .menu {
     display: flex;
-    justify-content: space-between; }
-    header nav .logo {
-      padding-left: 30px; }
-    header nav .menu {
-      display: flex;
-      list-style: none; }
-      header nav .menu li {
-        padding-right: 30px;
-        color: white; }
-      @media screen and (max-width: 768px) {
-        header nav .menu {
-          display: none; } }
-    header nav .burger-button {
-      visibility: hidden;
-      position: absolute;
-      top: 2vh;
-      right: 2vh;
-      z-index: 9999999999;
-      padding: 8px; }
-      @media screen and (max-width: 768px) {
-        header nav .burger-button {
-          visibility: visible; } }
-      header nav .burger-button span {
-        width: 25px;
-        border: 2px solid white;
-        background-color: white;
-        display: block;
-        border-radius: 22px;
-        transition: 2s; }
-      header nav .burger-button.active span {
-        border-color: #050875;
-        background-color: #050875; }
-      header nav .burger-button.active .burger-top {
-        position: absolute;
-        top: 8px;
-        transform: rotateZ(45deg); }
-      header nav .burger-button.active .burger-bottom {
-        position: absolute;
-        bottom: 8px;
-        transform: rotateZ(-45deg); }
-      header nav .burger-button.active .burger-middle {
-        transform: rotateZ(270deg);
-        border-color: rgba(0, 0, 0, 0);
-        background-color: rgba(0, 0, 0, 0); }
-      header nav .burger-button .burger-top, header nav .burger-button .burger-bottom {
-        position: absolute; }
-      header nav .burger-button .burger-top {
-        top: 02px; }
-      header nav .burger-button .burger-bottom {
-        bottom: 02px; }
-    header nav .burger-menu {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #f9f9f9;
-      padding: 5px;
-      box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
-      z-index: 99999999; }
-    header nav .burger-menu a {
-      text-decoration: none;
-      padding: 15px 11px;
-      font-size: 20px;
-      font-weight: 300;
-      color: #484848;
-      display: block;
-      padding: 5px 15px;
-      text-align: center;
-      white-space: nowrap; }
-    header nav .burger-menu li {
-      list-style: none; }
-  header .title {
-    padding: 50px; }
-    header .title h1 {
+    list-style: none; }
+    header nav .menu li {
+      padding-right: 30px;
       color: white; }
-    header .title h2 {
-      color: white; }
+    @media screen and (max-width: 768px) {
+      header nav .menu {
+        display: none; } }
+  header nav.nav-page {
+    background: white;
+    border-bottom: 2px solid #e6e6e6; }
+    header nav.nav-page i {
+      padding-top: 15px;
+      color: #050875;
+      font-size: 25px; }
+    header nav.nav-page .menu li a {
+      color: #050875;
+      text-decoration: none; }
+header .title {
+  padding: 50px; }
+  header .title h1 {
+    color: white; }
+  header .title h2 {
+    color: white; }
 
 .container {
   padding: 20px 30px; }
@@ -121,7 +71,8 @@ header {
   overflow: hidden; }
   .content-voiture img {
     max-width: 280px;
-    width: 100%; }
+    width: 100%;
+    height: 170px; }
   .content-voiture .content-info {
     padding: 10px 20px; }
     .content-voiture .content-info .name-car {
@@ -138,6 +89,106 @@ header {
         padding: 15px 35px; }
   .content-voiture .fa-check-square {
     color: #46DCA1; }
+
+.block-form {
+  background: white;
+  margin-top: 50px;
+  width: 300px;
+  box-shadow: 0px 0px 5px 0px #656565; }
+  .block-form form {
+    padding: 0 20px; }
+    .block-form form label {
+      display: block; }
+    .block-form form input[type="text"] {
+      width: 100%;
+      background: #e6e6e6;
+      border: none;
+      padding: 10px 0; }
+
+.wrapper {
+  padding: 0 30px;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 50px; }
+
+.carousel-container {
+  margin: 5px auto;
+  height: 100%;
+  padding-top: 50%;
+  border: none;
+  overflow: hidden;
+  position: relative; }
+
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin: 0;
+  background-color: green;
+  padding: 0;
+  white-space: nowrap;
+  z-index: 1; }
+
+.carousel li {
+  list-style-type: none;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+.carousel li img {
+  height: 100%;
+  width: 100%; }
+
+.thumbnails {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  padding: 0; }
+
+.thumbnails li {
+  display: inline-block;
+  list-style-type: none;
+  max-width: 100px;
+  padding: 0;
+  border: none;
+  margin: 5px;
+  transition: 0.25s;
+  box-sizing: border-box; }
+
+.thumbnails li img {
+  height: 100%;
+  width: 100%;
+  vertical-align: text-bottom; }
+
+.thumbnails li.active, .thumbnails li:hover {
+  border: 5px orange solid; }
+
+.arrow {
+  z-index: 10;
+  position: absolute;
+  padding: 0 5px;
+  top: 0;
+  height: 100%;
+  cursor: pointer; }
+
+.arrow i:hover {
+  color: #fff; }
+
+.arrow i {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  opacity: 0.7; }
+
+.right-arrow {
+  right: 0; }
+
+div.ui-loader {
+  display: none; }
 
 .row, .column {
   display: flex; }
@@ -407,6 +458,71 @@ h2 {
   .wrap-content .block-img {
     overflow: hidden;
     max-height: 330px; }
+
+.burger-button {
+  visibility: hidden;
+  position: absolute;
+  top: 2vh;
+  right: 2vh;
+  z-index: 9999999999;
+  padding: 8px; }
+  @media screen and (max-width: 768px) {
+    .burger-button {
+      visibility: visible; } }
+  .burger-button span {
+    width: 25px;
+    border: 2px solid white;
+    background-color: white;
+    display: block;
+    border-radius: 22px;
+    transition: 2s; }
+  .burger-button.active span {
+    border-color: #050875;
+    background-color: #050875; }
+  .burger-button.active .burger-top {
+    position: absolute;
+    top: 8px;
+    transform: rotateZ(45deg); }
+  .burger-button.active .burger-bottom {
+    position: absolute;
+    bottom: 8px;
+    transform: rotateZ(-45deg); }
+  .burger-button.active .burger-middle {
+    transform: rotateZ(270deg);
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0); }
+  .burger-button .burger-top, .burger-button .burger-bottom {
+    position: absolute; }
+  .burger-button .burger-top {
+    top: 02px; }
+  .burger-button .burger-bottom {
+    bottom: 02px; }
+
+.burger-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f9f9f9;
+  padding: 5px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  z-index: 99999999; }
+
+.burger-menu a {
+  text-decoration: none;
+  padding: 15px 11px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #484848;
+  display: block;
+  padding: 5px 15px;
+  text-align: center;
+  white-space: nowrap; }
+
+.burger-menu li {
+  list-style: none; }
 
 body {
   margin: 0;
