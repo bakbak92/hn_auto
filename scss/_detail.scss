@@ -20,7 +20,7 @@
     left: 0;
     height: 100%;
     margin: 0;
-    background-color: green;
+    background-color: transparent;
     padding: 0;
     white-space: nowrap;
     z-index: 1;
@@ -44,7 +44,11 @@
     position: relative;
     margin: auto;
     text-align: center;
-    padding: 0;}
+    padding: 0;
+    @media screen and (max-width: 400px){
+      display: none;
+    }
+  }
   
   .thumbnails li {
     display: inline-block;
@@ -65,7 +69,7 @@
   }
   
   .thumbnails li.active, .thumbnails li:hover {
-    border: 5px orange solid;
+    border: 2px $c-vert solid;
   }
   
   .arrow {
@@ -95,4 +99,79 @@
   
   div.ui-loader {
     display: none;
+  }
+
+  .modal {
+    background-color: white;
+    border: 1px solid #4F86C6;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 200px;
+    margin-left: -200px;
+    margin-top: -150px;
+    padding: 50px;
+    border-radius: 5px;
+    z-index: 100;
+    opacity:0;
+    transition: 0.5s ease-out;
+    transform: translateY(0);;
+  }
+  .open-modal, .btn {
+    background-color:#4F86C6;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    outline: none;
+    padding: 10px 40px;
+    text-transform: uppercase
+  }
+  .modal p {
+    border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mask{
+   position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(153, 153, 153, 0.27);
+    z-index: 50;
+    visibility: hidden;
+    opacity: 0;
+  
+    transition: 0.7s;
+  }
+  .active{
+    visibility: visible;
+    opacity: 1;
+  }
+  .active + .modal{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .section-detail{
+    background: white;
+    padding-bottom: 30px;
+    margin: 30px;
+    box-shadow: 0px 0px 5px 3px #e6e6e6;
+  }
+  .block-detail{
+    margin-top: 50px;
+    padding: 1em;
+    .title-detail{
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 23px;
+    }
+    ul{
+      li span{
+        font-weight: 700;
+      }
+    }
   }

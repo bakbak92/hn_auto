@@ -1,5 +1,10 @@
 
 header{
+    &.head-page{
+        background: url(../img/voiture-nav.jpeg);
+        background-size: cover;
+        height: 250px;
+    }
     &.header-hp{
         background: url(../img/car.jpeg);
         background-size: cover;
@@ -17,15 +22,17 @@ header{
             list-style: none;
             li {
                 padding-right: 30px;
-                color:$white;
+                a{
+                    color:$white;
+                    text-decoration: none;
+                }
+                
             }
             @media screen and (max-width: 768px) {
                 display: none;
               }
         }
-       &.nav-page{
-           background: $white;
-           border-bottom: 2px solid $c-gris;
+       /*&.nav-page{
            i{
             padding-top: 15px;
             color: $blue;
@@ -39,11 +46,12 @@ header{
                    } 
                }
            }
-       }
+       }*/
 
     }
     .title{
-        padding: 50px;
+        padding: 20px;
+        text-align: center;
         h1 {
             color: $white;
         }

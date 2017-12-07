@@ -23,6 +23,10 @@ footer .footer {
       footer .footer ul li i {
         padding-right: 0.5em; }
 
+header.head-page {
+  background: url(../img/voiture-nav.jpeg);
+  background-size: cover;
+  height: 250px; }
 header.header-hp {
   background: url(../img/car.jpeg);
   background-size: cover;
@@ -30,30 +34,38 @@ header.header-hp {
   height: 470px; }
 header nav {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  /*&.nav-page{
+      i{
+       padding-top: 15px;
+       color: $blue;
+       font-size: 25px;
+      }
+      .menu {
+          li{
+              a{
+               color: $blue;
+               text-decoration: none;
+              } 
+          }
+      }
+  }*/ }
   header nav .logo {
     padding-left: 30px; }
   header nav .menu {
     display: flex;
     list-style: none; }
     header nav .menu li {
-      padding-right: 30px;
-      color: white; }
+      padding-right: 30px; }
+      header nav .menu li a {
+        color: white;
+        text-decoration: none; }
     @media screen and (max-width: 768px) {
       header nav .menu {
         display: none; } }
-  header nav.nav-page {
-    background: white;
-    border-bottom: 2px solid #e6e6e6; }
-    header nav.nav-page i {
-      padding-top: 15px;
-      color: #050875;
-      font-size: 25px; }
-    header nav.nav-page .menu li a {
-      color: #050875;
-      text-decoration: none; }
 header .title {
-  padding: 50px; }
+  padding: 20px;
+  text-align: center; }
   header .title h1 {
     color: white; }
   header .title h2 {
@@ -89,21 +101,47 @@ header .title {
         padding: 15px 35px; }
   .content-voiture .fa-check-square {
     color: #46DCA1; }
+  .content-voiture .fa-times-circle {
+    color: #FE3954; }
 
 .block-form {
   background: white;
+  margin-left: 30px;
   margin-top: 50px;
-  width: 300px;
+  max-width: 400px;
+  margin-right: 30px;
+  padding: 1em;
   box-shadow: 0px 0px 5px 0px #656565; }
+  @media screen and (max-width: 400px) {
+    .block-form {
+      max-width: 280px;
+      margin: 0; } }
+  .block-form h4 {
+    text-align: center; }
   .block-form form {
-    padding: 0 20px; }
-    .block-form form label {
-      display: block; }
-    .block-form form input[type="text"] {
+    padding: 0 20px;
+    /*label{
+        display: block;
+    }
+    /*input[type="text"]{
+        width: 100%;
+        background: #e6e6e6;
+        border: none;
+        padding: 10px 0;
+    }*/ }
+    .block-form form .btn {
+      background: #050875;
       width: 100%;
-      background: #e6e6e6;
-      border: none;
-      padding: 10px 0; }
+      color: white;
+      padding: 15px; }
+      .block-form form .btn:hover {
+        background: rgba(5, 8, 117, 0.83);
+        color: white;
+        padding: 15px; }
+
+.content-form {
+  display: flex;
+  justify-content: center; }
 
 .wrapper {
   padding: 0 30px;
@@ -125,7 +163,7 @@ header .title {
   left: 0;
   height: 100%;
   margin: 0;
-  background-color: green;
+  background-color: transparent;
   padding: 0;
   white-space: nowrap;
   z-index: 1; }
@@ -147,6 +185,9 @@ header .title {
   margin: auto;
   text-align: center;
   padding: 0; }
+  @media screen and (max-width: 400px) {
+    .thumbnails {
+      display: none; } }
 
 .thumbnails li {
   display: inline-block;
@@ -164,7 +205,7 @@ header .title {
   vertical-align: text-bottom; }
 
 .thumbnails li.active, .thumbnails li:hover {
-  border: 5px orange solid; }
+  border: 2px #0C9A8B solid; }
 
 .arrow {
   z-index: 10;
@@ -189,6 +230,75 @@ header .title {
 
 div.ui-loader {
   display: none; }
+
+.modal {
+  background-color: white;
+  border: 1px solid #4F86C6;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 200px;
+  margin-left: -200px;
+  margin-top: -150px;
+  padding: 50px;
+  border-radius: 5px;
+  z-index: 100;
+  opacity: 0;
+  transition: 0.5s ease-out;
+  transform: translateY(0); }
+
+.open-modal, .btn {
+  background-color: #4F86C6;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  outline: none;
+  padding: 10px 40px;
+  text-transform: uppercase; }
+
+.modal p {
+  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: space-between; }
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(153, 153, 153, 0.27);
+  z-index: 50;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.7s; }
+
+.active {
+  visibility: visible;
+  opacity: 1; }
+
+.active + .modal {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0); }
+
+.section-detail {
+  background: white;
+  padding-bottom: 30px;
+  margin: 30px;
+  box-shadow: 0px 0px 5px 3px #e6e6e6; }
+
+.block-detail {
+  margin-top: 50px;
+  padding: 1em; }
+  .block-detail .title-detail {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 23px; }
+  .block-detail ul li span {
+    font-weight: 700; }
 
 .row, .column {
   display: flex; }

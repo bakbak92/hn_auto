@@ -11,19 +11,21 @@
     <script src="https://owlcarousel2.github.io/OwlCarousel2/"></script>
     <script src="script/burger.js"></script>
     <script src="script/carousel.js"></script>
+    <script src="script/modal.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <header class="head-page">
         <nav class="nav-page">
             <div class="logo">
-                <!--<img src="img/logo.png" alt="">-->
-                <i class="fa fa-car" aria-hidden="true"></i>                
+                <img src="img/logo.png" alt="">
             </div>
             <ul class="menu">
                 <li><a href="voiture.html">Nos Véhicules</a></li>
                 <li><a href="index.html">Qui sommes nous</a></li>
-                <li><a href="index.html">Contact</a></li>
             </ul>
             <div class="burger-button">
                     <span class="burger-top"></span>
@@ -37,21 +39,23 @@
                 <li>
                 <a href="index.html">Qui sommes nous</a>
                 </li>
-                <li>
-                <a href="detail.html">Contact</a>
-                </li>
             </div>
         </nav> 
+        <div class="title">
+            <h1>HN AUTO</h1>
+            <h2>Vente de véhicule en occasion à bas prix</h2>
+            
+        </div>
     </header>
-    <div class="row">
-        <div class="col-l-8 col-m-6">
+    <div class="row section-detail">
+        <div class="col-l-4 col-m-12">
             <div class="wrapper">
                 <div class="carousel-container">
                     <div class="arrow left-arrow"><i class="fa fa-arrow-circle-left fa-3x"></i></div>
                     <ul class="carousel">
-                    <li><img src="img/gova.jpg">
-                    <li><img src="img/caisse.jpg">
-                    <li><img src="img/gove.jpg">
+                        <li><img src="img/gova.jpg"></li>
+                        <li><img src="img/caisse.jpg"></li>
+                        <li><img src="img/gove.jpg"></li>
                     </ul>
                     <div class="arrow right-arrow"><i class="fa fa-arrow-circle-right fa-3x"></i></div>
                 </div>
@@ -60,22 +64,49 @@
                 <p></p>
             </div>
         </div>
-        <div class="col-l-4 col-m-12">
+        <div class="col-l-4 col-m-12 block-detail">
+            <div class="title-detail"><span>Clio 2</span><span>2450 €</span></div>
+            <div>Commentaires du reconditionneur :
+                Rayures et/ou impacts visibles sur la coque. L'écran peut avoir des micro-rayures, invisibles quand il est allumé. 25 points de test, garantie 6 mois. Made in France. Accessoires</div>
+                <ul>
+                    <li><span>Model:</span>clio 2</li>
+                    <li><span>Model:</span>clio 2</li>
+                    <li><span>Model:</span>clio 2</li>
+                    <li><span>Model:</span>clio 2</li>
+                    <li><span>Model:</span>clio 2</li>
+                    <li><span>Model:</span>clio 2</li>
+                    <li><span>Model:</span>clio 2</li>
+                    <li><span>Model:</span>clio 2</li>
+                    <li><span>Model:</span>clio 2</li>
+                    <li><span>Model:</span>clio 2</li>
+                    <li><span>Model:</span>clio 2</li>
+                    <li><span>Model:</span>clio 2</li>
+                    <li><span>Model:</span>clio 2</li>
+                </ul>
+        </div>
+        <div class="col-l-4 col-m-12 content-form">
             <div class="block-form">
-                <h4>Intérésser ? Envoyer nous un message</h4>
-                <form class="contact" action="">
-                    <label for="">Nom</label>
-                    <input type="text" placeholder="Nom" name="" id="">
-                    <label for="">Prenom</label>
-                    <input type="text" placeholder="Prenom" name="" id="">
-                    <label for="">Adresse email</label>
-                    <input type="text" placeholder="Adresse Email"name="" id="">
-                    <label for="">Message</label>
-                    <textarea name="" id="" placeholder="Message" cols="30" rows="4"></textarea>
-                    <div class="content-btn">
-                        <button type="submit">Envoyer</button>
+                <h4>Intérésser ? Envoyer nous un message Ou contactez nous au 07 00 00 92 24</h4>
+                <form class="ui form">
+                    <div class="field">
+                      <label>Prénom</label>
+                      <input type="text" name="Prenom" placeholder="First Name">
                     </div>
-                </form>
+                    <div class="field">
+                      <label>Nom</label>
+                      <input type="text" name="Nom" placeholder="Last Name">
+                    </div>
+                    <div class="field">
+                        <label>Email</label>
+                        <input type="text" name="Email" placeholder="Last Name">
+                      </div>
+                    <div class="field">
+                        <label>Message</label>
+                        <textarea rows="2"></textarea>
+                    </div>
+                    <button class="ui button btn" type="submit">Envoyer</button>
+                  </form>
+                
             </div>
         </div>
     </div>
