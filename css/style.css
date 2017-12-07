@@ -59,7 +59,12 @@ header nav {
       padding-right: 30px; }
       header nav .menu li a {
         color: white;
-        text-decoration: none; }
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px; }
+        header nav .menu li a:hover {
+          padding-bottom: 5px;
+          border-bottom: 3px solid #FE3954; }
     @media screen and (max-width: 768px) {
       header nav .menu {
         display: none; } }
