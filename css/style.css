@@ -31,7 +31,7 @@ header.header-hp {
   background: url(../img/car.jpeg);
   background-size: cover;
   text-align: center;
-  height: 470px; }
+  height: 350px; }
 header nav {
   display: flex;
   justify-content: space-between;
